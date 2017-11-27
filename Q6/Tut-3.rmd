@@ -1,6 +1,7 @@
 ```{r}
 
 student<-read.csv("Tut-3.csv",header=TRUE)
+head(student,n=10)
 head(student$Sub2,10)
 ```
 
@@ -38,7 +39,7 @@ using gsub remove character data in marks column. Using gsub remove numerical da
 ```{r}
 sub2
 gsub("[^0-9]","",sub2)
-names<-student$ï..Names
+names<-student$Names
 gsub("[^A-Za-z]","",names)
 ```
 
@@ -53,6 +54,7 @@ new_stud
 
 use table to get summary of student data
 ```{r}
+
 table(student["Sub1"])
 table(student["Dept"])
 ```
