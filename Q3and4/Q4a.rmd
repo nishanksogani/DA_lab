@@ -32,7 +32,13 @@ aggregate(Sub1~Dept.Name,student,mean)
 
 v. Extract 10 toppers of each dept.
 ```{r}
-
+for(i in unique(student$Dept.Name))
+{
+  cat(i,'\n')
+  t<-student[student$Dept.Name==i,]
+  t<-t[order(t$SGPA)]
+  print(head(t,n=10))
+}
 
 ```
 
